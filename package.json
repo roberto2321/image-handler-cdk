@@ -1,0 +1,45 @@
+{
+  "name": "image-handler-cdk",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "sst test",
+    "start": "sst start",
+    "build": "sst build",
+    "deploy": "sst deploy",
+    "remove": "sst remove",
+    "typeorm:cli": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js -f ./src/ormconfig.ts",
+    "db:migrate": "npm run typeorm:cli migration:run",
+    "db:revert": "npm run typeorm:cli migration:revert"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.126.0",
+    "@types/aws-lambda": "^8.10.70",
+    "@types/sharp": "^0.29.2",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.11.0"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-ec2": "1.126.0",
+    "@aws-cdk/aws-rds": "1.126.0",
+    "@aws-cdk/core": "1.126.0",
+    "@serverless-stack/cli": "0.49.1",
+    "@serverless-stack/resources": "0.49.1",
+    "@types/jsonwebtoken": "^8.5.5",
+    "@types/uuid": "^8.3.1",
+    "aws-amplify": "^4.3.1",
+    "aws-sdk": "^2.1000.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.1",
+    "sharp": "^0.29.2",
+    "typeorm": "^0.2.38",
+    "typeorm-aurora-data-api-driver": "^2.3.4",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "serverless-stack"
+    ]
+  }
+}
